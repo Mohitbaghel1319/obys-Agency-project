@@ -10,6 +10,15 @@ html, body{
     height: 100%;
     width: 100%;
 }
+#crsr{
+    height: 2.3vw;
+    width: 2.3vw;
+    border: 1px solid #ffffffc7;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999;
+    transform: translate(-50% -50%);
+}
 #loader{
     padding: 25vh 8vw;
     height: 100%;
@@ -83,4 +92,36 @@ main{
     height: 100vh;
     width: 100%;
     background-color: #151515;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+}
+#nav-part2 h1{
+    font-size: 0.8vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+.hero{
+    
+    width: 72%;
+    margin-left: 25%;
+}
+.hero:nth-child(2){
+    margin-top: 19vh;
+}
+.hero h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
 }

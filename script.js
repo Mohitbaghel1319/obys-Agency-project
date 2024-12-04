@@ -1,7 +1,6 @@
-
+function loaderAnimation(){
 
 const tl = gsap.timeline();
-
 tl.from(".line h1",{
    y: 100,
    stagger:0.2, 
@@ -38,3 +37,13 @@ tl.from("#page1",{
 tl.to("#loader",{
     display: "none",
 })
+}
+
+loaderAnimation();
+
+document.addEventListener("mousemove",function(dets){
+    gsap.to("#crsr",{
+        left:dets.x,
+        top:dets.y,
+    });
+});
