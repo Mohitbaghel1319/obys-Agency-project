@@ -25,7 +25,7 @@ tl.to(".line h2",{
 });
 tl.to("#loader",{
     opacity:0,
-    duration:0.35,
+    duration:0.2,
     delay:1.8
 });
 tl.from("#page1",{
@@ -37,13 +37,25 @@ tl.from("#page1",{
 tl.to("#loader",{
     display: "none",
 })
+tl.from("#nav",{
+    opacity:0
+})
+tl.from(".hero h1, .hero h2",{
+    y:120,
+    stagger:0.2
+})
+}
+function curserAnimation(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#crsr",{
+            left:dets.x,
+            top:dets.y,
+        });
+    });
+    
+    Shery.makeMagnet("#nav-part2 h1");
 }
 
 loaderAnimation();
+curserAnimation();
 
-document.addEventListener("mousemove",function(dets){
-    gsap.to("#crsr",{
-        left:dets.x,
-        top:dets.y,
-    });
-});
