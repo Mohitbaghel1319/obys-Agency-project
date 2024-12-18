@@ -113,16 +113,25 @@ main{
     font-weight: 500;
     cursor: pointer;
 }
-.hero{
-    
+.hero{    
     width: 72%;
     margin-left: 25%;
     height: fit-content;
     overflow-y: hidden;
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 9999;
+    /* position: relative; */
+    z-index: 999;
+}
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-style: italic;
+    left: 15%;
+    top: 32%;
 }
 .hero:nth-child(2){
     margin-top: 19vh;
@@ -200,10 +209,22 @@ main{
 #page4-content h1{
     font-size: 7vw;
     text-transform: uppercase;
+    position: relative;
+}
+
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-style: italic;
+    left: -15%;
+    top: 10%;
 }
 #page4-content .underline{
     height: 1px;
-    background-color: #FFF;
+    background-color: #ffffffd1;
     width: 100%;
     margin: 5vw 0;
 }
@@ -253,4 +274,110 @@ main{
 #page5{
     min-height: 100vh;
     width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+#page5 .elem{
+    white-space: nowrap;
+}
+#page5 .elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    color: transparent;
+    margin-right: 16px;
+    animation-name: anime2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#page5 .elem span{
+    font-style: italic;
+    color: transparent;
+}
+
+#page5 .elem2{
+    white-space: nowrap;
+}
+#page5 .elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    color: transparent;
+    margin-right: 16px;
+    animation-name: anime2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+#page5 .elem2 span{
+    font-style: italic;
+    color: transparent;
+}
+
+@keyframes anime2 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+#footer{
+    height: 80vh;
+    width: 100%;
+    /* background-color: #3f7df4; */
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 4vw;
+}
+
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-style: italic;
+    left: -15%;
+    top: 10%;
+}
+.underline2{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 2vw 0;
+}
+
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 13.5vw;
+    padding-right: 12vw;   
+}
+#footer .box{
+    /* height: 38vh; */
+    padding: 5vh 0;
+}
+#footer .box h6{
+    font-size: 1vw;
+    font-weight: 400;
+    padding: 1.5vw 0;
+}
+#footer .box h5{
+    font-size: 1.3vw;
+    font-weight: 500;
+    padding: 0.4vh 0;
 }
